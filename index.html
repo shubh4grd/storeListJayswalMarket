@@ -22,11 +22,236 @@
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
             rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="style.css" rel="stylesheet">
     </head>
+    <style>
+        /*******************************/
+/********* General CSS *********/
+/*******************************/
+body {
+  color: #797979;
+  background: #ffffff;
+  font-family: "Open Sans", sans-serif;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1d2434;
+}
+
+a {
+  color: #454545;
+  transition: 0.3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #fb0005;
+  outline: none;
+  text-decoration: none;
+}
+
+.btn:focus,
+.form-control:focus {
+  box-shadow: none;
+}
+
+.container-fluid {
+  max-width: 1366px;
+}
+
+/**********************************/
+/********** Top Bar CSS ***********/
+/**********************************/
+.top-bar {
+  position: relative;
+  height: 60px;
+  background: #1d2434;
+}
+
+.top-bar .top-bar-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.top-bar .top-bar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.top-bar .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 60px;
+  padding: 0 10px;
+  text-align: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.top-bar .text h2 {
+  color: #eeeeee;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.top-bar .text p {
+  color: #eeeeee;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.top-bar .social {
+  display: flex;
+  height: 60px;
+  font-size: 0;
+  justify-content: flex-end;
+}
+
+.top-bar .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 100%;
+  font-size: 22px;
+  color: #ffffff;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.top-bar .social a:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.top-bar .social a:hover {
+  color: #fb0005;
+  background: #ffffff;
+}
+
+@media (min-width: 992px) {
+  .top-bar {
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    padding: 20px 60px;
+    background: rgba(0, 0, 0, 0.1) !important;
+    z-index: 9;
+  }
+
+  .navbar.nav-sticky {
+    padding: 10px 60px;
+    background: #1d2434 !important;
+  }
+
+  .navbar a.nav-link {
+    padding: 8px 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    padding: 15px;
+    background: #1d2434 !important;
+  }
+
+  .navbar a.nav-link {
+    padding: 5px;
+  }
+}
+
+/*******************************/
+/********* Service CSS *********/
+/*******************************/
+.service {
+  position: relative;
+  width: 100%;
+  padding: 45px 0 15px 0;
+}
+
+.service .service-item {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  background: rgba(29, 36, 52, 0.04);
+}
+
+.service .service-img {
+  position: relative;
+  width: 100%;
+}
+
+.service .service-img img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service .service-img::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  background: transparent;
+  /* border: 1px solid #ffffff; */
+  z-index: 1;
+}
+
+.service .service-item h3 {
+  margin: 0;
+  padding: 25px 15px 15px 15px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.service .service-item p {
+  margin: 0;
+  padding: 0 25px 25px 25px;
+  font-size: 16px;
+}
+
+.service .service-item a.btn {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d2434;
+  border: 2px solid #1d2434;
+  border-radius: 0;
+  background: none;
+  transition: 0.3s;
+}
+
+.service .service-item:hover a.btn {
+  color: #fb0005;
+  background: #1d2434;
+  border-color: #1d2434;
+}
+
+    </style>
     <body>
         <!-- Top Bar Start -->
         <div class="top-bar d-none d-md-block">
@@ -137,14 +362,5 @@
             </div>
         </div>
         <!-- Service End -->
-
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <!-- Contact Javascript File -->
-
-        <!-- Template Javascript -->
-        <script src="main.js"></script>
     </body>
 </html>
