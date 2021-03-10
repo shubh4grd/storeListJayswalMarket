@@ -1,366 +1,592 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Store List | Jayswal Market</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Store List Jayswal Market" name="keywords">
-        <meta content="Store List Jayswal Market" name="description">
+  <head>
+    <meta charset="utf-8">
+    <title>Barber X - Barber Shop Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Jayswal Market Govindpur Dhanbad" name="keywords">
+    <meta content="Jayswal Market Govindpur Dhanbad" name="description">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet">
 
-        <!-- Google Font -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-            rel="stylesheet">
+    <!-- CSS Libraries -->
 
-        <!-- CSS Libraries -->
-        <link
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            rel="stylesheet">
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-            rel="stylesheet">
-    </head>
+    <link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet">
+    <!-- Template Stylesheet -->
     <style>
-        /*******************************/
+            /*******************************/
 /********* General CSS *********/
 /*******************************/
 body {
-  color: #797979;
-  background: #ffffff;
-  font-family: "Open Sans", sans-serif;
+    color: #797979;
+    background: #ffffff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1,
-h2,
-h3,
+h2, 
+h3, 
 h4,
-h5,
+h5, 
 h6 {
-  color: #1d2434;
+    color: #1d2434;
 }
 
 a {
-  color: #454545;
-  transition: 0.3s;
+    color: #454545;
+    transition: .3s;
 }
 
 a:hover,
 a:active,
 a:focus {
-  color: #fb0005;
-  outline: none;
-  text-decoration: none;
+    color: #D5B981;
+    outline: none;
+    text-decoration: none;
 }
 
 .btn:focus,
 .form-control:focus {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 .container-fluid {
-  max-width: 1366px;
+    max-width: 1366px;
 }
 
-/**********************************/
-/********** Top Bar CSS ***********/
-/**********************************/
-.top-bar {
-  position: relative;
-  height: 60px;
-  background: #1d2434;
-}
-
-.top-bar .top-bar-left {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.top-bar .top-bar-right {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.top-bar .text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 60px;
-  padding: 0 10px;
-  text-align: center;
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.top-bar .text h2 {
-  color: #eeeeee;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
-  margin: 0;
-}
-
-.top-bar .text p {
-  color: #eeeeee;
-  font-size: 12px;
-  font-weight: 400;
-  margin: 0;
-}
-
-.top-bar .social {
-  display: flex;
-  height: 60px;
-  font-size: 0;
-  justify-content: flex-end;
-}
-
-.top-bar .social a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 100%;
-  font-size: 22px;
-  color: #ffffff;
-  border-right: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.top-bar .social a:first-child {
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.top-bar .social a:hover {
-  color: #fb0005;
-  background: #ffffff;
-}
-
-@media (min-width: 992px) {
-  .top-bar {
-    padding: 0 60px;
-  }
-}
-
-@media (min-width: 992px) {
-  .navbar {
-    position: absolute;
-    width: 100%;
-    top: 60px;
-    padding: 20px 60px;
-    background: rgba(0, 0, 0, 0.1) !important;
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #D5B981;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
     z-index: 9;
-  }
-
-  .navbar.nav-sticky {
-    padding: 10px 60px;
-    background: #1d2434 !important;
-  }
-
-  .navbar a.nav-link {
-    padding: 8px 15px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
 }
 
-@media (max-width: 991.98px) {
-  .navbar {
-    padding: 15px;
-    background: #1d2434 !important;
-  }
-
-  .navbar a.nav-link {
-    padding: 5px;
-  }
+.back-to-top:hover {
+    background: #1d2434;
 }
+
+.back-to-top:hover i {
+    color: #D5B981;
+}
+
+.back-to-top i {
+    color: #1d2434;
+    padding-top: 10px;
+}
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.navbar {
+    position: relative;
+    transition: .5s;
+    z-index: 999;
+}
+
+.navbar.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+.navbar .navbar-brand {
+    margin: 0;
+    padding-top: 25px;
+    color: #ffffff;
+    font-size: 45px;
+    line-height: 0px;
+    font-weight: 600;
+}
+
+.navbar .navbar-brand span {
+    font-weight: 800;
+}
+
+.navbar .navbar-brand img {
+    max-width: 100%;
+    max-height: 40px;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    padding: 10px 10px 8px 10px;
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    background: rgba(256, 256, 256, .1);
+    transition: none;
+}
+
+.navbar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f8f9fa;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        padding: 20px 60px;
+        background: rgba(0, 0, 0, 0.719) !important;
+        z-index: 9;
+    }
+    
+    .navbar.nav-sticky {
+        padding: 10px 60px;
+        background: #1d2434 !important;
+    }
+    
+    .navbar a.nav-link {
+        padding: 8px 15px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 991.98px) {   
+    .navbar {
+        padding: 15px;
+        background: #1d2434 !important;
+    }
+    
+    .navbar a.nav-link {
+        padding: 5px;
+    }
+    
+    .navbar .dropdown-menu {
+        box-shadow: none;
+    }
+}
+/*******************************/
+/******* Carousel CSS *******/
+/*******************************/
+#myCarousel{
+  padding-top: 50px;
+}
+
+
+/*******************************/
+/******* Page Header CSS *******/
+/*******************************/
+.page-header {
+    position: relative;
+    margin-bottom: 45px;
+    padding: 150px 0 90px 0;
+    text-align: center;
+    background: #D5B981;
+}
+
+.page-header h2 {
+    position: relative;
+    color: #1d2434;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.page-header a {
+    position: relative;
+    padding: 0 12px;
+    font-size: 22px;
+    color: #1d2434;
+}
+
+.page-header a:hover {
+    color: #ffffff;
+}
+
+.page-header a::after {
+    position: absolute;
+    content: "/";
+    width: 8px;
+    height: 8px;
+    top: -2px;
+    right: -7px;
+    text-align: center;
+    color: #1d2434;
+}
+
+.page-header a:last-child::after {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .page-header h2 {
+        font-size: 35px;
+    }
+    
+    .page-header a {
+        font-size: 18px;
+    }
+}
+
+
+/*******************************/
+/******* Section Header ********/
+/*******************************/
+.section-header {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+}
+
+.section-header p {
+    margin-bottom: 5px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.section-header h2 {
+    margin: 0;
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+    .section-header h2 {
+        font-size: 30px;
+    }
+}
+
 
 /*******************************/
 /********* Service CSS *********/
 /*******************************/
 .service {
-  position: relative;
-  width: 100%;
-  padding: 45px 0 15px 0;
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
 }
 
 .service .service-item {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 30px;
-  background: rgba(29, 36, 52, 0.04);
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    background: rgba(29, 36, 52, .04);
 }
 
 .service .service-img {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .service .service-img img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.service .service-img::after {
-  position: absolute;
-  content: "";
-  top: 15px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  background: transparent;
-  /* border: 1px solid #ffffff; */
-  z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .service .service-item h3 {
-  margin: 0;
-  padding: 25px 15px 15px 15px;
-  font-size: 25px;
-  font-weight: 700;
+    margin: 0;
+    padding: 25px 15px 15px 15px;
+    font-size: 25px;
+    font-weight: 700;
 }
 
 .service .service-item p {
-  margin: 0;
-  padding: 0 25px 25px 25px;
-  font-size: 16px;
+    margin: 0;
+    padding: 0 25px 25px 25px;
+    font-size: 16px;
 }
 
 .service .service-item a.btn {
-  position: relative;
-  margin-bottom: 30px;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #1d2434;
-  border: 2px solid #1d2434;
-  border-radius: 0;
-  background: none;
-  transition: 0.3s;
+    position: relative;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d2434;
+    border: 2px solid #1d2434;
+    border-radius: 0;
+    background: none;
+    transition: .3s;
 }
 
 .service .service-item:hover a.btn {
-  color: #fb0005;
-  background: #1d2434;
-  border-color: #1d2434;
+    color: #D5B981;
+    background: #1d2434;
+    border-color: #1d2434;
 }
 
-    </style>
-    <body>
-        <!-- Top Bar Start -->
-        <div class="top-bar d-none d-md-block">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="top-bar-left">
-                            <div class="text">
-                                <h2>8:00 - 9:00</h2>
-                                <p>Opening Hour Mon - Fri</p>
-                            </div>
-                            <div class="text">
-                                <h2>+123 456 7890</h2>
-                                <p>Call Us For Appointment</p>
-                            </div>
-                            <div class="text">
-                                <h2>mail@shopname.com</h2>
-                                <p>Mail Us For Any Query</p>
-                            </div>
-                            <div class="text">
-                                <h2>Govindpur, Dhanbad</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="top-bar-right">
-                            <div class="social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+ .social {
+    display: flex;
+    height: 60px;
+    font-size: 0;
+    justify-content:center;
+}
+
+ .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 100%;
+    font-size: 24px;
+    color: #D5B981;
+}
+
+
+.social a:hover {
+    color: #f10202;
+    background: #D5B981;
+    border-radius: 50%;
+}
+
+@media (min-width: 992px) {
+    .top-bar {
+        padding: 0 60px;
+    }
+}
+
+
+        </style>
+  </head>
+
+  <body>
+    <!-- Top Bar Start -->
+
+    <!-- Top Bar End -->
+
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a href="index.html" class="navbar-brand">Barber <span>X</span></a>
+        <button type="button" class="navbar-toggler"
+          data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between"
+          id="navbarCollapse">
+          <div class="navbar-nav ml-auto">
+            <!-- here details -->
+
+          </div>
         </div>
-        <!-- Top Bar End -->
+      </div>
+    </div>
+    <!-- Nav Bar End -->
 
 
-        <!-- Page Header Start -->
+    <!-- Page Header Start -->
 
 
-        <!-- Page Header End -->
+    <div class="crousel">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
 
+          <div class="item active">
+            <img src="img/bg.jpg" alt="barber shop" style="width:100%;">
+          </div>
 
-        <!-- Service Start -->
-        <div class="service">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Our Salon Services</p>
-                    <h2>Best Salon and Barber Services for You</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-1.jpg" alt="Image">
-                            </div>
-                            <h3>Hair Cut</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec
-                                pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/service-2.jpg" alt="Image">
-                            </div>
-                            <h3>Beard Style</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec
-                                pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/wash.jpg"
-                                    alt="Image">
-                            </div>
-                            <h3>Color & Wash</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec
-                                pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-item">
-                            <div class="service-img">
-                                <img src="img/colour.jpg" alt="Image">
-                            </div>
-                            <h3>Party Ready</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus nec
-                                pretium mi. Curabitur facilisis ornare velit non
-                            </p>
-                        </div>
-                    </div>
-                    <div style="padding: 20px 0;" class="service-item">
-                        <a class="btn" href="">Learn More</a>
-                    </div>
-                </div>
-            </div>
+          <div class="item">
+            <img src="img/bg.jpg" alt="barber shop" style="width:100%;">
+          </div>
+
+          <div class="item">
+            <img src="img/bg.jpg" alt="barber shop" style="width:100%;">
+          </div>
+
         </div>
-        <!-- Service End -->
-    </body>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel"
+          data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel"
+          data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Page Header End -->
+
+
+    <!-- Service Start -->
+    <div class="service">
+      <div class="container">
+        <div class="section-header text-center">
+          <p>Shop Name</p>
+          <p>Shop Category</p>
+          <div class="col-md-12">
+            <div class="social">
+              <a href=""><i class="fab fa-twitter"></i></a>
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href=""><i class="fab fa-linkedin-in"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="section-header text-center">
+          <p>Our Salon Services</p>
+          <h2>Best Salon and Barber Services for You</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="service-item">
+              <div class="service-img">
+                <img src="img/service-1.jpg" alt="Image">
+              </div>
+              <h3>Hair Cut</h3>
+              <p>
+                Lorem ipsum dolor sit amet elit. Phasellus nec
+                pretium mi. Curabitur facilisis ornare velit non
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="service-item">
+              <div class="service-img">
+                <img src="img/service-2.jpg" alt="Image">
+              </div>
+              <h3>Beard Style</h3>
+              <p>
+                Lorem ipsum dolor sit amet elit. Phasellus nec
+                pretium mi. Curabitur facilisis ornare velit non
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="service-item">
+              <div class="service-img">
+                <img src="img/wash.jpg"alt="Image">
+              </div>
+              <h3>Party Ready</h3>
+              <p>
+                Lorem ipsum dolor sit amet elit. Phasellus nec
+                pretium mi. Curabitur facilisis ornare velit non
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="service-item">
+              <div class="service-img">
+                <img src="img/service-3.jpg" alt="Image">
+              </div>
+              <h3>Color & Wash</h3>
+              <p>
+                Lorem ipsum dolor sit amet elit. Phasellus nec
+                pretium mi. Curabitur facilisis ornare velit non
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-6">
+            <div style="padding-top: 3%;" class="service-item">
+
+              <a class="btn" href="">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center;" class="row">
+          <h1>Location</h1>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116808.87789265602!2d86.38400144554276!3d23.80873164871455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdcc1176145330e9d!2sPlaza%20Saloon!5e0!3m2!1sen!2sin!4v1615294342408!5m2!1sen!2sin"
+            width="100%" height="300px" style="border:0;"
+            allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Footer Start -->
+
+    <!-- Footer End -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Template Javascript -->
+    <script>
+            (function ($) {
+    "use strict";
+    
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
+    
+    
+    // Sticky Navbar
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            $('.navbar').addClass('nav-sticky');
+        } else {
+            $('.navbar').removeClass('nav-sticky');
+        }
+    });
+    
+    
+    // Dropdown on mouse hover
+    $(document).ready(function () {
+        function toggleNavbarMethod() {
+            if ($(window).width() > 992) {
+                $('.navbar .dropdown').on('mouseover', function () {
+                    $('.dropdown-toggle', this).trigger('click');
+                }).on('mouseout', function () {
+                    $('.dropdown-toggle', this).trigger('click').blur();
+                });
+            } else {
+                $('.navbar .dropdown').off('mouseover').off('mouseout');
+            }
+        }
+        toggleNavbarMethod();
+        $(window).resize(toggleNavbarMethod);
+    });
+})(jQuery);
+
+
+        </script>
+  </body>
 </html>
