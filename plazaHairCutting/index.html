@@ -113,13 +113,14 @@ a:focus {
     margin: 0;
     padding-top: 25px;
     color: #ffffff;
-    font-size: 45px;
+    font-size: 30px;
     line-height: 0px;
     font-weight: 600;
 }
 
 .navbar .navbar-brand span {
-    font-weight: 800;
+    font-weight: 700;
+    color: #D5B981;
 }
 
 .navbar .navbar-brand img {
@@ -141,12 +142,6 @@ a:focus {
     transition: none;
 }
 
-.navbar .dropdown-menu {
-    margin-top: 0;
-    border: 0;
-    border-radius: 0;
-    background: #f8f9fa;
-}
 
 @media (min-width: 992px) {
     .navbar {
@@ -362,12 +357,42 @@ a:focus {
     background: #D5B981;
     border-radius: 50%;
 }
-
-@media (min-width: 992px) {
-    .top-bar {
-        padding: 0 60px;
-    }
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
+
+.top-bar-left .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 60px;
+    padding: 0 10px;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.top-bar-left .text:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.top-bar-left .text h2 {
+    color: #eeeeee;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.top-bar-left .text p {
+    color: #eeeeee;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+}
+
 
 
         </style>
@@ -381,17 +406,25 @@ a:focus {
     <!-- Nav Bar Start -->
     <div class="navbar navbar-expand-lg bg-dark navbar-dark">
       <div class="container-fluid">
-        <a href="index.html" class="navbar-brand">Barber <span>X</span></a>
-        <button type="button" class="navbar-toggler"
-          data-toggle="collapse" data-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
+        <a href="index.html" class="navbar-brand"><span>Plaza</span> Hair
+          Cutting Saloon</a>
         <div class="collapse navbar-collapse justify-content-between"
           id="navbarCollapse">
-          <div class="navbar-nav ml-auto">
-            <!-- here details -->
-
+          <div class="col-md-12">
+            <div class="top-bar-left">
+              <div class="text">
+                <h2>8:00 - 9:00</h2>
+                <p>Opening Hour Mon - Fri</p>
+              </div>
+              <div class="text">
+                <h2>7250158694</h2>
+                <p>Abdul Ansari</p>
+              </div>
+              <div class="text">
+                <h2 href="mailto:email@example.com">email@example.com</h2>
+                <p>Mail us for any query</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -408,15 +441,15 @@ a:focus {
         <div class="carousel-inner">
 
           <div class="item active">
-            <img src="img/bg.jpg" alt="barber shop" style="width:100%;">
+            <img src="../img/bg.jpg" alt="barber shop" style="width:100%;">
           </div>
 
           <div class="item">
-            <img src="img/bg.jpg" alt="barber shop" style="width:100%;">
+            <img src="../img/bg.jpg" alt="barber shop" style="width:100%;">
           </div>
 
           <div class="item">
-            <img src="img/bg.jpg" alt="barber shop" style="width:100%;">
+            <img src="../img/bg.jpg" alt="barber shop" style="width:100%;">
           </div>
 
         </div>
@@ -442,8 +475,8 @@ a:focus {
     <div class="service">
       <div class="container">
         <div class="section-header text-center">
-          <p>Shop Name</p>
-          <p>Shop Category</p>
+          <p>Plaza Hair Cutting Saloon</p>
+          <p>Men's Saloon</p>
           <div class="col-md-12">
             <div class="social">
               <a href=""><i class="fab fa-twitter"></i></a>
@@ -454,14 +487,14 @@ a:focus {
           </div>
         </div>
         <div class="section-header text-center">
-          <p>Our Salon Services</p>
-          <h2>Best Salon and Barber Services for You</h2>
+          <h2>Our Services</h2>
+          <p>Best Salon and Barber Services for You</p>
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="service-item">
               <div class="service-img">
-                <img src="img/service-1.jpg" alt="Image">
+                <img src="../img/service.png" alt="Image">
               </div>
               <h3>Hair Cut</h3>
               <p>
@@ -473,7 +506,7 @@ a:focus {
           <div class="col-lg-3 col-md-6">
             <div class="service-item">
               <div class="service-img">
-                <img src="img/service-2.jpg" alt="Image">
+                <img src="../img/service.png" alt="Image">
               </div>
               <h3>Beard Style</h3>
               <p>
@@ -485,7 +518,7 @@ a:focus {
           <div class="col-lg-3 col-md-6">
             <div class="service-item">
               <div class="service-img">
-                <img src="img/wash.jpg"alt="Image">
+                <img src="../img/service.png" alt="Image">
               </div>
               <h3>Party Ready</h3>
               <p>
@@ -497,7 +530,7 @@ a:focus {
           <div class="col-lg-3 col-md-6">
             <div class="service-item">
               <div class="service-img">
-                <img src="img/service-3.jpg" alt="Image">
+                <img src="../img/service.png" alt="Image">
               </div>
               <h3>Color & Wash</h3>
               <p>
@@ -517,7 +550,7 @@ a:focus {
         <div style="text-align: center;" class="row">
           <h1>Location</h1>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116808.87789265602!2d86.38400144554276!3d23.80873164871455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdcc1176145330e9d!2sPlaza%20Saloon!5e0!3m2!1sen!2sin!4v1615294342408!5m2!1sen!2sin"
+            src="https://maps.google.com/maps?q=jayswal%20market,%20govindpur&t=&z=13&ie=UTF8&iwloc=&output=embed"
             width="100%" height="300px" style="border:0;"
             allowfullscreen="" loading="lazy"></iframe>
         </div>
